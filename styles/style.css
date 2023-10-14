@@ -1,0 +1,124 @@
+:root{
+ --pale-blue: hsl(225, 100%, 94%);
+ --bright-blue: hsl(245, 75%, 52%);
+
+
+ --very-pale-blue: hsl(225, 100%, 98%);
+ --desaturated-blue: hsl(224, 23%, 55%);
+ --dark-blue: hsl(223, 47%, 23%);
+
+ --padding-container: 60px 0;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    background-color: var(--pale-blue);
+    min-height: 100vh;
+    display: flex;
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-repeat: repeat-x;
+}
+
+.card{
+    width: 340px;
+    margin: auto;
+    overflow-x: hidden;
+    background-color: white;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.card::before{
+    content: '';
+    top: 0;
+    display: block;
+    height: 200px;
+    width: 100%;
+    background-image: url(../images/illustration-hero.svg);
+    background-size: cover;
+}
+
+.card__title{
+    padding: 30px 0;
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+.card__paragraph{
+    color: var(--desaturated-blue);
+    line-height: 1.4rem;
+    padding: 0 35px 30px;
+}
+
+.card__plan{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px 10px;
+    background-color: var(--very-pale-blue);
+    border-radius: 15px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.card__name{
+    font-size: 0.9rem;
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+.card__price{
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--desaturated-blue);
+}
+
+.card__link{
+    font-size: 0.8rem;
+    color: var(--bright-blue);
+}
+
+.card__info{
+    padding-right: 30px;
+}
+
+.card__cta{
+    display: block;
+    width: 80%;
+    background-color: var(--bright-blue);
+    margin: 0 auto;
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+    font-weight: 900;
+    border: none;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.card__cta:hover{
+    background-color: hsl(245, 75%, 80%);;
+}
+
+.card__cta--gray{
+    background-color: white;
+    color: var(--desaturated-blue);
+    margin: 15px auto;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+.card__cta--gray:hover{
+    background-color: white;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
+}
